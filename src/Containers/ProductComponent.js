@@ -1,24 +1,26 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import { useSelector } from "react-redux";
+import {Card,Stack} from 'react-bootstrap';
 const ProductComponent = ()=>{
     const products= useSelector((state)=>state.allProducts.products);
     const renderList = products.map((product)=>{
         const {id,title,image,category,price} = product;
-return(<div className="four column wide" key={id}>
-    <Link to ={`/product.${id}`}>
-<div className="ui link cards"></div>
-<div className="card">
-    <div className="image">
-        <img src= {image} alt={title}/>
-    </div>
-    <div className="content"></div>
-    <div className="header">{title}</div>
-    <div className="meta price">{category}</div>
+return(<div key={id}>
     
-    <div className="meta price">${price}</div>
-</div>
-</Link>
+    <Link to ={`/product.${id}`}>
+    <Card style={{ width: '18rem' }}>
+    <Card.Img variant="top" src= {image} alt={title}/> 
+    <Card.Body>
+    <Card.Title>{title}</Card.Title>
+    <Card.Text>
+     {category}
+     ${price}
+    </Card.Text>
+     </Card.Body>
+    </Card>
+    </Link>
+  
 </div>)
     })
    

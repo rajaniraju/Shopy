@@ -4,7 +4,6 @@ import './App.css';
 import Header from './Containers/Header';
 import ProductList from './Containers/ProductListing';
 import ProductDetails from './Containers/ProductDetails';
-
 import {BrowserRouter as Router,Route} from 'react-router-dom';
 import {Routes} from "react-router";
 

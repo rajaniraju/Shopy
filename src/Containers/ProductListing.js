@@ -2,6 +2,7 @@ import React,{useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import ProductComponent from "./ProductComponent";
 import {SET_PRODUCTS}from "../Redux/Actions/productActions";
+import { Stack } from "react-bootstrap";
 import axios from 'axios';
 const ProductList = ()=>{
     const products= useSelector((state)=>state);
@@ -16,8 +17,11 @@ const ProductList = ()=>{
  },[])
  console.log("Products:",products)
 return (<>
-<div className="ui grid container">
+<div >
+<Stack direction ="horizontal" gap={3}>
 <ProductComponent/>
-</div></>)
+</Stack>
+</div>
+</>)
 }
  export default ProductList;
