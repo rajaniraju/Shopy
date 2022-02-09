@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import { useSelector } from "react-redux";
-import {Card,Stack} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
 const ProductComponent = ()=>{
     const products= useSelector((state)=>state.allProducts.products);
     const renderList = products.map((product)=>{

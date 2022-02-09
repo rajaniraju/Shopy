@@ -8,9 +8,15 @@ export const SET_PRODUCTS =(products)=>{
 
 }
 
-export const SELECTED_PRODUCT=(selectProducts)=>{
+export const selectedProduct=(product)=>{
     return{
         type:ActionTypes.SELECTED_PRODUCTS,
-        payload:selectProducts,
+        payload:product,
+    }
+}
+export const RemoveSelectedProduct=(product)=>{
+    return{
+        type:ActionTypes.REMOVE_SELECTED_PRODUCT,
+       
     }
 }
